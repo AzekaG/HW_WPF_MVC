@@ -1,0 +1,37 @@
+﻿<Window x:Class="HW_WPF_MVC.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_WPF_MVC"
+        mc:Ignorable="d"
+        Title="OurApp" Height="600" Width="1000" ResizeMode="NoResize">
+    <Grid Background="#ffdadada">
+        <Border  Background="white" MinHeight="600" MinWidth="1000" MaxHeight="600" MaxWidth="1000" VerticalAlignment="Center" Padding="30"  CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Привет Вам!" FontStretch="ExtraExpanded" HorizontalAlignment="Center" FontSize="30" Margin=" 0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+
+                </Grid>
+                <Grid>
+                    <TextBox x:Name="txtName" materialDesign:HintAssist.Hint ="Введите имя" HorizontalAlignment="left" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox  x:Name="txtNameSearch"  materialDesign:HintAssist.Hint ="Введите имя для поиска" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                </Grid>
+                <TextBox x:Name="txtAge"  materialDesign:HintAssist.Hint="Введите возраст" HorizontalAlignment="left" />
+                <Grid Margin="0 0 0 20">
+                    <Button Margin="10" HorizontalAlignment="Left" x:Name="btnAdd" Width="174" Click="btnAdd_Click">Добавить</Button>
+                    <Button  HorizontalAlignment="Left" x:Name="btnSearch" Margin="795,0,10,0" Width="119" Click="btnSearch_Click">Найти</Button>
+                </Grid>
+                
+                <ListBox x:Name="txtList" MinWidth="450" MinHeight="200" MaxHeight="200" MaxWidth="450" Margin="20" materialDesign:HintAssist.Hint="Список пуст. Обновите. " HorizontalAlignment="left" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" AutomationProperties.IsOffscreenBehavior="Onscreen" ScrollViewer.CanContentScroll="False" Grid.IsSharedSizeScope="True"/>
+                <Button x:Name="btnUpdate" Click="btnUpdate_Click_1">Выход</Button>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+
+</Window>
